@@ -1,0 +1,38 @@
+
+    #contactes
+    {
+        margin: 1.2rem 0;
+        padding: 0.8rem;
+        
+    }
+    #contactes #contacte_list 
+    {
+        display: flex;
+        justify-content: center;
+        
+
+        span 
+        {
+            display: block;
+        }
+        a 
+        {
+            font-size: 1.7rem;
+            display: inline-block;
+            margin:0 1.5rem ;
+            text-align: center;
+            border: solid 3px var(--basic-royalblue);
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            padding:0.2rem ;
+        }
+
+        a img 
+        {
+            width: 2.6rem;
+            height: 2.6rem;
+            vertical-align: middle;
+        }
+    }

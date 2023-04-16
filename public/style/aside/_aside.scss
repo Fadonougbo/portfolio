@@ -1,0 +1,43 @@
+aside 
+{
+    background-color: var(--basic_bg_black_with_opcity);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: fixed;
+    height: 100%;
+
+
+    section 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 1.8rem 0;
+        cursor: pointer;
+
+        span 
+        {
+            font-size: 1.4rem;
+            padding: 0.7rem;
+            text-align: center;
+        }
+    }
+
+    section div 
+    {
+        width:4rem;
+        height:4rem;
+        margin:0 1.5rem ;
+
+        img
+        {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    
+}

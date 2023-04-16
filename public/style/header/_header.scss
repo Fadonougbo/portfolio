@@ -1,0 +1,32 @@
+
+header 
+{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    background-color: var(--basic_bg_black_with_opcity);
+    height: 5rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end ;
+    z-index: 100;
+}
+
+header div 
+{
+
+    & 
+    {
+        margin-right: 1.8rem;
+    }
+    span
+    {
+        display: block;
+        width:4.5rem;
+        height: 1rem;
+        background-color: var(--basic-royalblue);
+        margin: 0.5rem 0;
+        border-radius: 0.5rem;
+    }
+}

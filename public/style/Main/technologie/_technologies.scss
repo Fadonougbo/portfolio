@@ -1,0 +1,70 @@
+
+#technologies
+{
+    width: 100%;
+
+    section
+    {
+        margin: 6rem 0 ;
+
+        h3 
+        {
+            font-size: 1.8rem;
+            margin: 1.4rem 1rem;
+            text-align: center;
+
+            &::after,&::before
+            {
+                content: "";
+                display: inline-block;
+                width: 34%;
+                height: 0.9rem;
+                vertical-align: middle;
+                border-radius: 6px;
+                margin:0 0.2rem;
+                background-color: var(--basic-royalblue)
+            }
+        } 
+        
+    }
+
+    #techno_cards
+    {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 2.5rem;
+    }
+
+    #techno_cards .card
+    {
+        width:35%;
+        border:solid 3px var(--basic-royalblue);
+        margin: 1.3rem 0;
+        border-radius: 2.5rem;
+        padding: 0.8rem;
+
+
+        .logo 
+        {
+            display: flex;
+            justify-content: center;
+            height: 100px;
+        }
+
+        span 
+        {
+            font-size: 1.2rem;
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin: 0.6rem 0;
+            text-transform: uppercase;
+        }
+
+    }
+
+
+
+}

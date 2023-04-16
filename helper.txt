@@ -1,0 +1,20 @@
+techno et site
+
+html,scss,react,js,pixabay pour les images,svg repo pour les icons gratuit
+
+ajoute le logo de fastify a la partie backend
+
+ajoute un lien  vers tes contacts 
+
+faire le SEO
+change la police
+
+change le favicon
+
+geré le responsive pour le aside 
+
+continue avec le site ensuive reviens sur l'animation
+
+continue avec les animations
+
+reviens sur le probleme du menu hamburger

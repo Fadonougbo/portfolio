@@ -1,0 +1,22 @@
+@use "./presentation/presentation";
+@use "projects";
+@use "./technologie/technologies" ;
+@use "./footer/footer"as * ;
+@use "./contactes" as *;
+
+main 
+{
+    width: 100%;
+
+    & h2 
+    {
+        text-align: center;
+        font-size: 2.3rem;
+        margin: 2rem 0;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: var(--basic-royalblue);
+    }
+}
+
+
