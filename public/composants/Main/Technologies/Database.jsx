@@ -13,8 +13,8 @@ export const Database=()=>{
 
     return (
         <section>
-            <h3>Database</h3>
-            <div id="techno_cards">{cards}</div>
+            <h3>Databases</h3>
+            <div className="techno_cards">{cards}</div>
         </section>
     )
 

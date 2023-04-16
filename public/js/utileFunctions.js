@@ -86,3 +86,69 @@ export const getPosition=(sectionName)=>
     })
 
 }
+
+export const createInsetDiv=(firstDiv,coucheInfo)=>
+{
+        /**
+         * Liste des couches
+         */
+        /* const arr=Object.keys(coucheInfo) */
+
+        /**
+         * Mape un tableau pour créer les differentes couche
+         */
+        coucheInfo.map((el,key)=>
+        {
+
+            const newDiv=document.createElement("div")
+            newDiv.setAttribute("class",`couche couche_${key+1}`)
+
+            const ratio=100-(key*20)
+
+            newDiv.style.width=`${ratio}%`
+            newDiv.style.height=`${ratio}%`
+
+            const path=el.path
+
+            el.links.forEach((link)=>
+            {
+                newDiv.innerHTML+=`<img src="../pictures/${path}/${path}_${link}.svg" alt="logo" />`
+            })
+
+            firstDiv.appendChild(newDiv)
+            
+        })
+}
+
+export const circleStartAnimation=()=>{
+
+    const couches=document.querySelectorAll(".couche")
+
+    couches.forEach((couche,key)=>{
+
+        const children=[...couche.children]
+
+        const parentHeight=couche.offsetHeight
+
+        const deg=360/children.length
+
+        children.forEach((el,key)=>
+        {
+            el.style.setProperty("transform",`rotate(-${deg*key}deg) translateY(${parentHeight/2}px)`)
+        })
+
+        const d=key%2===0?-360:360
+
+        couche.animate(
+            [
+                {transform:`rotate(${d}deg)`}
+            ],
+            {
+                duration:22000,
+                iterations:"Infinity",
+                direction:"normal"
+            })
+    })
+
+
+}

@@ -25,7 +25,7 @@
             padding: 0.6rem 0;
         }
 
-        #project_info :is(h3,h4,p)
+        #project_info :is(h3,h4)
         {
             margin: 1rem 0;
             font-size: 1.7rem;
@@ -33,7 +33,7 @@
             vertical-align: middle;
         }
 
-        #project_info :is(h3,h4,p)::before
+        #project_info :is(h3,h4)::before
         {
             content: "";
             display: inline-block;
@@ -44,9 +44,18 @@
             margin-right: 0.5rem;
         }
 
+        #project_info :is(p,li)
+        {
+            font-size: 1.3rem;
+        }
+
+        #project_info p 
+        {
+            display: inline;
+        }
+
         #project_info ul li 
         {
-            font-size: 1.2rem;
             display: inline-block;
             margin: 0 0.8rem;
             background:var(--basic-royalblue);

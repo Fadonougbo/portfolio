@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { getPosition } from "../../../js/utileFunctions.js";
+import React from "react";
 
 export const Contacte=({info})=>{
 

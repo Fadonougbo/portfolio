@@ -17,4 +17,8 @@ continue avec le site ensuive reviens sur l'animation
 
 continue avec les animations
 
-reviens sur le probleme du menu hamburger
+*********************
+
+Arrange les code surtour la partie js utiles
+
+utilise le requestAnimationFrame pour le circle

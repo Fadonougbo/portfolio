@@ -10,7 +10,7 @@ export const Technologies=()=>{
 
     return (
             <div id="technologies">
-                <h2>Mes competences</h2>
+                <h2>Mes compétences</h2>
                 <Frontend/>
                 <Backend/>
                 <Database/>

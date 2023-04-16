@@ -38,7 +38,7 @@ export const Contactes=()=>{
 
     return (
             <div id="contactes"  className="contactes_section" >
-                <h2>Contactes</h2>
+                <h2>Me contacté</h2>
                 <div id="contacte_list" >{contacteList} </div>
             </div>
            )

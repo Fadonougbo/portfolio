@@ -1,4 +1,6 @@
 
+@use "bounce_animation" as *;
+
 #technologies
 {
     width: 100%;
@@ -17,18 +19,25 @@
             {
                 content: "";
                 display: inline-block;
-                width: 34%;
+                width: 0;
                 height: 0.9rem;
                 vertical-align: middle;
                 border-radius: 6px;
                 margin:0 0.2rem;
                 background-color: var(--basic-royalblue)
             }
+
         } 
+
+        h3.add_width::after,h3.add_width::before
+        {
+            width: 34%;
+            transition: width 1.2s;
+        }
         
     }
 
-    #techno_cards
+    .techno_cards
     {
         width: 100%;
         display: flex;
@@ -37,13 +46,29 @@
         column-gap: 2.5rem;
     }
 
-    #techno_cards .card
+    .techno_cards .card
     {
         width:35%;
         border:solid 3px var(--basic-royalblue);
         margin: 1.3rem 0;
         border-radius: 2.5rem;
         padding: 0.8rem;
+        opacity: 0;
+
+        &.bounce_in_left
+        {
+            opacity: 1;
+            -webkit-animation: bounce_in_left 0.9s both;
+            animation: bounce_in_left 0.9s both;
+        }
+
+        &.bounce_in_right
+        {
+            opacity: 1;
+            -webkit-animation: bounce_in_right 0.9s both;
+            animation: bounce_in_right 0.9s both;
+        }
+
 
 
         .logo 
@@ -68,3 +93,6 @@
 
 
 }
+
+@include left_bounce_animation();
+@include right_bounce_animation()

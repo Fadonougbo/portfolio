@@ -8,15 +8,21 @@ export const Header=({mainRef})=>
 {
 
     const menuClick=()=>{
+        //burger animation
+        let wrapperMenu = document.querySelector('.wrapper-menu');
+        wrapperMenu.classList.toggle('open');  
 
+        //Main translate function
         setMainTranslatePosition(mainRef.current)
     }
     return (
             <header>
-                <div onClick={menuClick} >
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div onClick={menuClick} id="burger">
+                    <div className="wrapper-menu">
+                        <div className="line-menu half start"></div>
+                        <div className="line-menu"></div>
+                        <div className="line-menu half end"></div>
+                    </div>
                 </div>
             </header>
     )

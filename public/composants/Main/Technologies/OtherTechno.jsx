@@ -13,8 +13,8 @@ export const OtherTechno=()=>{
 
     return (
         <section>
-            <h3>Autres</h3>
-            <div id="techno_cards">{cards}</div>
+            <h3>Outils</h3>
+            <div className="techno_cards">{cards}</div>
         </section>
     )
 

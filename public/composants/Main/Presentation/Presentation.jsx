@@ -1,47 +1,52 @@
 /* eslint-disable @babel/object-curly-spacing */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect } from "react"
+import React from "react"
 import { CircleAnimation } from "./CircleAnimation.jsx"
-import { typingAnimation } from "../../../js/animation/typingAnimation.js"
 
 export const Presentation=()=>{
 
-    const couches={
+    const couches=[
 
-        couche_1:{
-
-           links:["../../img/css-svgrepo-com.svg","../../img/html-5-svgrepo-com.svg","../../img/css-svgrepo-com.svg","../../img/css-svgrepo-com.svg","../../img/html-5-svgrepo-com.svg"] 
+        {
+            name:"couche_1",
+            path:"frontend",
+           links:["html","css","javascript","react","redux","scss"] 
         },
 
-        couche_2:{
-
-            links:["../../img/html-5-svgrepo-com.svg","../../img/css-svgrepo-com.svg","../../img/css-svgrepo-com.svg","../../img/html-5-svgrepo-com.svg"] 
+        {
+            name:"couche_2",
+            path:"backend",
+            links:["fastify","node","php"] 
          },
 
-         couche_3:{
-
-            links:["../../img/html-5-svgrepo-com.svg","../../img/css-svgrepo-com.svg","../../img/css-svgrepo-com.svg","../../img/html-5-svgrepo-com.svg"] 
+        {
+            name:"couche_3",
+            path:"database",
+            links:["mongoDB","mysql","postgreSql"] 
          },
 
-         couche_4:{
-
-            links:[] 
+        {
+            name:"couche_4",
+            path:"other",
+            links:["git","github","vitejs"] 
          }
-        
-    }
+
+        ]
 
 
     return (
             <div id="presentation" >
                 <h1 className="typing">Bienvenue sur mon portfolio.</h1>
+
                 <section id="perso_description" className="presentation_section" >
-                    <h2>A propos</h2>
-                    <p>Salut je m'appelle <span>Gautier Fadonougbo</span>, je suis developpeur web full stack.  Passionné par le developpement web ,le developpement mobile et tous ce qui a atrait à la programmation informatique  depuis plus de  3ans maintenant </p>
+                    <h2>Qui suis-je ?</h2>
+                    <p>Salut je m'appelle <span>Gautier Fadonougbo</span>, je suis développeur web full stack .</p>
+                    <p>Je suis passionné par le développement web , le développement mobile et tous ce qui a atrait à la programmation informatique  depuis plus de  3 ans maintenant .</p>
+                    <p>J'aide les entreprises et les particuliés à augmenter  leur visibilité et leur revenu  sur le net  .</p>
                 </section>
 
                 <section id="circle" >
                     <CircleAnimation coucheInfo={couches} />
-                    
                 </section>
             </div>
     )

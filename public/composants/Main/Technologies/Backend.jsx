@@ -4,7 +4,7 @@ import { Card } from "./Card"
 
 export const Backend=()=>{
 
-    const backList=["php","node"]
+    const backList=["php","node","fastify"]
 
     const cards=backList.map((el,key)=>
     {
@@ -13,8 +13,8 @@ export const Backend=()=>{
 
     return (
         <section>
-            <h3>Backend</h3>
-            <div id="techno_cards">{cards}</div>
+            <h3>Back-end</h3>
+            <div className="techno_cards">{cards}</div>
         </section>
     )
 

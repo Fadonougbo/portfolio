@@ -14,8 +14,8 @@ export const Frontend=()=>{
 
     return (
         <section>
-                <h3>Frontend</h3>
-                <div id="techno_cards">{cards}</div>
+                <h3>Front-end</h3>
+                <div className="techno_cards">{cards}</div>
         </section>
     )
 
