@@ -11,7 +11,7 @@
 {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto', sans-serif;
     
     a 
     {
@@ -30,6 +30,18 @@ html
 {
     font-size: 62.5%;
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar
+{
+    background:transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--basic-royalblue);
+    border-radius: 1.3rem;
+    width: 0.7rem;
 }
 
 body 

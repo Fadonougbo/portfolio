@@ -1,5 +1,6 @@
 
 @use "bounce_animation" as *;
+@use "technologies_media" as *;
 
 #technologies
 {
@@ -84,7 +85,7 @@
             text-align: center;
             display: block;
             width: 100%;
-            margin: 0.6rem 0;
+            margin: 0.8rem 0;
             text-transform: uppercase;
         }
 
@@ -95,4 +96,5 @@
 }
 
 @include left_bounce_animation();
-@include right_bounce_animation()
+@include right_bounce_animation();
+@include technologies_media_query()

@@ -1,16 +1,11 @@
 /* eslint-disable @babel/object-curly-spacing */
 /* eslint-disable react/display-name */
 /* eslint-disable react/self-closing-comp */
-import React, {useEffect } from "react"
-import { setAsideHeight } from "../../js/utileFunctions"
+import React from "react"
 import { AsideSection } from "./AsideSection"
 
 
 export const Aside=()=>{
-
-    useEffect(()=>{
-        //setAsideHeight()
-    },[])
 
     const sectionList=[
          {

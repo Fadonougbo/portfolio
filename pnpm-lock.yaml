@@ -4,12 +4,14 @@ specifiers:
   '@types/react': ^18.0.26
   '@types/react-dom': ^18.0.9
   '@vitejs/plugin-react': ^3.0.0
+  lodash.throttle: ^4.1.1
   react: ^18.2.0
   react-dom: ^18.2.0
   sass: ^1.57.1
   vite: ^4.0.0
 
 dependencies:
+  lodash.throttle: 4.1.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -759,6 +761,10 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
     dev: true
+
+  /lodash.throttle/4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
 
   /loose-envify/1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}

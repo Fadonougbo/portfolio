@@ -1,3 +1,4 @@
+@use "header_media" as *;
 
 header 
 {
@@ -70,3 +71,5 @@ header #burger
 
     
 }
+
+@include header_media_query()

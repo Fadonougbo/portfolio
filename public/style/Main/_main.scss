@@ -1,8 +1,9 @@
 @use "./presentation/presentation";
-@use "projects";
+@use "./projects/projects";
 @use "./technologie/technologies" ;
 @use "./footer/footer"as * ;
 @use "./contactes" as *;
+@use "main_media" as *;
 
 main 
 {
@@ -19,5 +20,7 @@ main
         text-decoration-color: var(--basic-royalblue);
     }
 }
+
+@include main_media_query()
 
 

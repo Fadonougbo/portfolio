@@ -1,3 +1,5 @@
+@use "presentation_media" as *;
+
 #presentation 
 {
     padding: 1.1rem;
@@ -5,40 +7,33 @@
     {
         font-size: 2.5rem;
         margin:2rem 0 ;
+        text-align: center;
         color: var(--basic-royalblue);
-        animation: hu__hu__ infinite 2s ease-in-out  ;
-        
-        
+        animation: hu__hu__ infinite 2s ease-in-out ;
     }
 
     #circle 
     {
-        width:34rem;
-        height:34rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #circle_animation
     {
-        width:100%;
-        height:100%;
-        border:solid 2px blue;
+        width:36rem;
+        height:36rem;
         margin: 5rem 0;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        &:hover 
-        {
-            transform: rotate(360deg);
-            transition: transform 6s;
-        }
-
         .couche 
         {
             position: absolute;
             border-radius: 50%;
-            border: solid 1px green;
+            border: solid 1px var(--basic-royalblue);;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -78,3 +73,6 @@
     50% { transform: translateY(20px) }
 }
 
+//media query
+
+@include presentationMediaQuery()

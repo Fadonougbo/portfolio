@@ -1,0 +1,11 @@
+@mixin projects_media_query
+{
+    @media screen and (min-width:575px) {
+
+        #projects .project_card 
+        {
+            width: 53%;
+        }
+
+    }
+}

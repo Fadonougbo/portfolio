@@ -2,23 +2,22 @@ techno et site
 
 html,scss,react,js,pixabay pour les images,svg repo pour les icons gratuit
 
-ajoute le logo de fastify a la partie backend
-
 ajoute un lien  vers tes contacts 
 
 faire le SEO
-change la police
 
 change le favicon
 
-geré le responsive pour le aside 
 
-continue avec le site ensuive reviens sur l'animation
+corrige les fautes de la presentation
 
-continue avec les animations
+ajoute un indicateur au niveau du menu
+
+ajoute une aniamtion lors du loading
+
+bouton pour allez au top 
+
 
 *********************
 
-Arrange les code surtour la partie js utiles
-
-utilise le requestAnimationFrame pour le circle
+Arrange les codes surtour la partie js utiles (important)

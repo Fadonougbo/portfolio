@@ -1,0 +1,72 @@
+@mixin presentationMediaQuery
+{
+
+ @media screen and (min-width:660px)
+ {
+    #presentation
+    {
+        padding: 3rem;
+    }
+
+    #presentation #circle_animation
+    {
+        width:43rem;
+        height:43rem;
+
+
+        .couche img 
+        {
+            width: 4rem;
+            height: 4rem;
+            
+        }
+    }
+ }
+
+
+ @media screen and (min-width:950px)
+ {
+        
+        #presentation #presentation_container
+        {
+            display: flex;
+        }
+        #presentation #perso_description
+        {
+            width: 49%;
+        }
+
+        #presentation #circle 
+        {
+            width:49% ;
+        }
+
+        #presentation  #circle_animation
+        {
+            width:33rem;
+            height:33rem;
+        }
+ }
+
+ @media screen and (min-width:1300px) {
+    
+    #presentation #perso_description
+    {
+        width: 40%;
+    }
+
+    #presentation #circle 
+    {
+        justify-content: flex-end;
+        width:55% ;
+    }
+
+    #presentation  #circle_animation
+    {
+        width:38rem;
+        height:38rem;
+    }
+
+ }
+    
+}

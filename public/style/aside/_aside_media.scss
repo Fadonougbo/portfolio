@@ -1,0 +1,11 @@
+@mixin aside_media_query
+{
+
+    @media screen and (min-width:1023px) {
+       aside 
+       {
+         width:10%
+       }
+    }
+
+}

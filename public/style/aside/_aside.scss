@@ -1,3 +1,5 @@
+@use "aside_media" as *;
+
 aside 
 {
     background-color: var(--basic_bg_black_with_opcity);
@@ -41,3 +43,5 @@ aside
 
     
 }
+
+@include aside_media_query();

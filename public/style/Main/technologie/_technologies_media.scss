@@ -1,0 +1,30 @@
+@mixin technologies_media_query
+{
+    @media screen and (min-width:900px)
+    {
+        #technologies .techno_cards
+        {
+            padding: 2rem;
+            column-gap:0;
+        }
+        #technologies .techno_cards .card
+        {
+            width:17%;
+            margin: 1rem;
+        }
+    }
+
+    @media screen and (min-width:1200px)
+    {
+        #technologies .techno_cards
+        {
+            padding: 2rem;
+            column-gap:0;
+        }
+        #technologies .techno_cards .card
+        {
+            width:10%;
+            margin: 2rem;
+        }
+    }
+}

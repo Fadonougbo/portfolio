@@ -1,0 +1,12 @@
+@mixin globaleContainer_media_query
+{
+    @media screen and (min-width:1023px) {
+        
+        #globale_container
+        {
+            position: static;
+            width: 90%;
+            transform: translateX(11%);
+        }
+    }
+}

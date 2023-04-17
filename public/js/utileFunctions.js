@@ -1,3 +1,5 @@
+import throttle  from "lodash.throttle"
+
 /**
  * Place le composant GlobaleContainer convenablement
  * en donnant un margin top
@@ -28,7 +30,8 @@ export const setAsideHeight=function()
 }
 
 /**
- * Permet de faire bouger le main
+ * Permet de faire bouger le globaleContainer
+ * Donne un overflow hidden au body et l'enlève apres la fermetur du menu 
  * @param {*} main 
  */
 export const setMainTranslatePosition=(globaleContainer)=>
@@ -60,9 +63,14 @@ export const setMainTranslatePosition=(globaleContainer)=>
     
 }
 
+/**
+ * permet de faire scroller vers une section en cas de click au niveau de la navigation
+ * 
+ * @param {*} sectionName nom de la section de liaison
+ * @returns 
+ */
+export const scrollto=(sectionName)=>{
 
-export const getPosition=(sectionName)=>
-{
     if(sectionName==="home_section")
     {
         window.scrollTo({
@@ -87,12 +95,14 @@ export const getPosition=(sectionName)=>
 
 }
 
+/**
+ * creation des diferentes couches
+ * 
+ * @param {*} firstDiv 
+ * @param {*} coucheInfo 
+ */
 export const createInsetDiv=(firstDiv,coucheInfo)=>
 {
-        /**
-         * Liste des couches
-         */
-        /* const arr=Object.keys(coucheInfo) */
 
         /**
          * Mape un tableau pour créer les differentes couche
@@ -103,21 +113,42 @@ export const createInsetDiv=(firstDiv,coucheInfo)=>
             const newDiv=document.createElement("div")
             newDiv.setAttribute("class",`couche couche_${key+1}`)
 
-            const ratio=100-(key*20)
-
+            const ratio=100-(key*25)
+            /**
+             * hauteur et largeur des div
+             */
             newDiv.style.width=`${ratio}%`
             newDiv.style.height=`${ratio}%`
 
+            /**
+             * path pour les images
+             */
             const path=el.path
 
+            /**
+             * ajout des images à chaque couche
+             */
             el.links.forEach((link)=>
             {
                 newDiv.innerHTML+=`<img src="../pictures/${path}/${path}_${link}.svg" alt="logo" />`
             })
 
+            /**
+             * ajout des div au parent
+             */
             firstDiv.appendChild(newDiv)
             
         })
+}
+
+const setLogoPosition=(currentCouche,children,rotateDeg)=>{
+
+    const parentHeight=currentCouche.offsetHeight
+
+    children.forEach((el,key)=>
+    {
+        el.style.setProperty("transform",`rotate(${rotateDeg*key}deg) translateY(${parentHeight/2}px)`)
+    })
 }
 
 export const circleStartAnimation=()=>{
@@ -128,27 +159,47 @@ export const circleStartAnimation=()=>{
 
         const children=[...couche.children]
 
-        const parentHeight=couche.offsetHeight
-
         const deg=360/children.length
 
-        children.forEach((el,key)=>
+        setLogoPosition(couche,children,deg)
+
+        const onResize=()=>
         {
-            el.style.setProperty("transform",`rotate(-${deg*key}deg) translateY(${parentHeight/2}px)`)
-        })
+            setLogoPosition(couche,children,deg)
+        }
 
-        const d=key%2===0?-360:360
+        window.addEventListener("resize",throttle(onResize,400) )
 
-        couche.animate(
-            [
-                {transform:`rotate(${d}deg)`}
-            ],
-            {
-                duration:22000,
-                iterations:"Infinity",
-                direction:"normal"
-            })
+
+        /**
+         * Determine le sens de rotation des couches
+         */
+        const rotateDirection=key%2===0?-360:360
+
+        /**
+         * Animation
+        */
+
+        circleAnimate(couche,rotateDirection)
     })
 
 
+}
+
+/**
+ * Animation
+ * @param {HTMLElement} element 
+ * @param {number} rotateDirection 
+ */
+function circleAnimate(element,rotateDirection)
+{
+    element.animate(
+        [
+            {transform:`rotate(${rotateDirection}deg)`}
+        ],
+        {
+            duration:22000,
+            iterations:"Infinity",
+            direction:"normal"
+        })
 }

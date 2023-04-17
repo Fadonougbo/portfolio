@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { getPosition } from "../../js/utileFunctions";
+import React from "react";
+import {scrollto } from "../../js/utileFunctions";
 
 export const AsideSection=({id,liaisonName,children})=>{
     
@@ -7,7 +7,7 @@ export const AsideSection=({id,liaisonName,children})=>{
     {
         if(liaisonName)
         {
-            getPosition(liaisonName)
+            scrollto(liaisonName)
         }
         
     }

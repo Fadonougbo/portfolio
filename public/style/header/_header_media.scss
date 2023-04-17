@@ -1,0 +1,10 @@
+@mixin header_media_query
+{
+    @media screen and (min-width:1023px)
+    {
+        header #burger
+        {
+            display: none;
+        }        
+    }
+}

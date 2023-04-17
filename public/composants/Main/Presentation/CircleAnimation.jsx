@@ -15,7 +15,7 @@ export const CircleAnimation=({coucheInfo})=>{
         createInsetDiv(circleRef.current,coucheInfo)
         circleStartAnimation()
         
-    },[])
+    },[coucheInfo])
 
     return (
 
