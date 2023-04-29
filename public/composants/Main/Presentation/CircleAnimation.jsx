@@ -2,7 +2,8 @@
 /* eslint-disable @babel/object-curly-spacing */
 /* eslint-disable react/no-unescaped-entities */
 import React, {useEffect, useRef } from "react"
-import { circleStartAnimation, createInsetDiv } from "../../../js/utileFunctions.js"
+import { Helper } from "../../../js/Helper.js"
+import { circleStartAnimation } from "../../../js/animation.js"
 
 export const CircleAnimation=({coucheInfo})=>{
 
@@ -12,7 +13,7 @@ export const CircleAnimation=({coucheInfo})=>{
 
     useEffect(()=>{
 
-        createInsetDiv(circleRef.current,coucheInfo)
+        Helper.createCouche(circleRef.current,coucheInfo)
         circleStartAnimation()
         
     },[coucheInfo])

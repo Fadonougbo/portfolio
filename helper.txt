@@ -21,3 +21,5 @@ bouton pour allez au top
 *********************
 
 Arrange les codes surtour la partie js utiles (important)
+
+definire une dossier publicDir pour les fichier static et image

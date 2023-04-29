@@ -1,5 +1,5 @@
 import React from "react";
-import {scrollto } from "../../js/utileFunctions";
+import { scrollto } from "../../js/scrollto.js";
 
 export const AsideSection=({id,liaisonName,children})=>{
     
@@ -11,7 +11,6 @@ export const AsideSection=({id,liaisonName,children})=>{
         }
         
     }
-
 
     return (
         <section id={id} onClick={click} >

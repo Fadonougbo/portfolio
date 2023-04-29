@@ -2,7 +2,7 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/self-closing-comp */
 import React from "react"
-import { setMainTranslatePosition } from "../../js/utileFunctions.js"
+import { Helper } from "../../js/Helper.js";
 
 export const Header=({mainRef})=>
 {
@@ -13,7 +13,7 @@ export const Header=({mainRef})=>
         wrapperMenu.classList.toggle('open');  
 
         //Main translate function
-        setMainTranslatePosition(mainRef.current)
+        Helper.translateMain(mainRef.current)
     }
     return (
             <header>
