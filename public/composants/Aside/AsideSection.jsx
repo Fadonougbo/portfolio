@@ -1,14 +1,20 @@
+/* eslint-disable react/self-closing-comp */
 import React from "react";
 import { scrollto } from "../../js/scrollto.js";
 
-export const AsideSection=({id,liaisonName,children})=>{
+export const AsideSection=({id,liaisonName,menuIdicator,children})=>{
     
-    const click=()=>
+    const click=(e)=>
     {
         if(liaisonName)
         {
             scrollto(liaisonName)
         }
+
+       if(menuIdicator)
+       {
+        menuIdicator.run(e.currentTarget)
+       }
         
     }
 
@@ -17,7 +23,7 @@ export const AsideSection=({id,liaisonName,children})=>{
             <div>
                 <img src={`../../pictures/aside/aside_${id}.svg`} alt={id+" logo"} />
             </div>
-            <span>{children}</span>
+            <span className="section_title" >{children}</span>
         </section>
     )
 }

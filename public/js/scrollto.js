@@ -16,7 +16,7 @@ export const scrollto=(sectionName)=>{
         return;
     }
     
-    const el=document.querySelector(`.${sectionName}`)
+    const el=document.querySelector(`[dataset=${sectionName}]`)
 
     const scrollY=window.scrollY
 

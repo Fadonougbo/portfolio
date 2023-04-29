@@ -2,20 +2,15 @@ techno et site
 
 html,scss,react,js,pixabay pour les images,svg repo pour les icons gratuit
 
-ajoute un lien  vers tes contacts 
-
 faire le SEO
 
 change le favicon
-
 
 corrige les fautes de la presentation
 
 ajoute un indicateur au niveau du menu
 
 ajoute une aniamtion lors du loading
-
-bouton pour allez au top 
 
 
 *********************

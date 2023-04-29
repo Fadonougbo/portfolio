@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react"
@@ -13,7 +14,7 @@ export const Projects=()=>{
     })
 
     return (
-            <div id="projects" className="project_section" >
+            <div id="projects" dataset={"project_section"} className="main_section" >
                <section><h2>Mes projets</h2></section>
                <section className="project_card" >
                     <div id="image" ></div>

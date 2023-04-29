@@ -1,11 +1,15 @@
 /* eslint-disable @babel/object-curly-spacing */
 /* eslint-disable react/display-name */
 /* eslint-disable react/self-closing-comp */
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { AsideSection } from "./AsideSection"
+import { MenuIndicator } from "../../js/MenuIndicator.js"
+import { startSectionObserver } from "../../js/mainSectionObserver.js"
 
 
 export const Aside=()=>{
+
+    const [menuIdicator,setMenuIdicator]=useState(null)
 
     const sectionList=[
          {
@@ -16,7 +20,7 @@ export const Aside=()=>{
         {
             id:"about",
             name:"A propos",
-            liaisonName:"presentation_section"
+            liaisonName:"about_section"
         }, 
         {
             id:"project",
@@ -24,16 +28,37 @@ export const Aside=()=>{
             liaisonName:"project_section"
         },
         {
+            id:"skills",
+            name:"Mes compétences",
+            liaisonName:"skills_section"
+        },
+        {
             id:"contact",
             name:"Contactes",
-            liaisonName:"contactes_section"
+            liaisonName:"contact_section"
         }
     ]
+
+
+    useEffect(()=>{
+
+        function init()
+        {
+            const menuIdicator=new MenuIndicator("aside","aside section")
+
+            setMenuIdicator(menuIdicator)
+            startSectionObserver(menuIdicator)
+        }
+
+        init()
+
+
+    },[])
 
     const AsideSectionList=sectionList.map((el,key)=>
     {
         const {id,liaisonName,name}=el
-        return <AsideSection id={id} liaisonName={liaisonName} key={key} >{name}</AsideSection>
+        return <AsideSection id={id} liaisonName={liaisonName} menuIdicator={menuIdicator} key={key} >{name}</AsideSection>
     })
 
     return (<aside>{AsideSectionList}</aside>)

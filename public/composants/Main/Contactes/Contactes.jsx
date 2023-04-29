@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable @babel/object-curly-spacing */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react"
@@ -9,7 +10,7 @@ export const Contactes=()=>{
     const list=[
 
         {
-            href:"#",
+            href:"https://www.facebook.com/gautier.fadonougbo.9",
             imgPath:"img/facebook-svgrepo-com",
             alt:"Facebook"
         },
@@ -24,7 +25,7 @@ export const Contactes=()=>{
             alt:"Whatsapp"
         },
         {
-            href:"#",
+            href:"https://github.com/Fadonougbo?tab=repositories",
             imgPath:"pictures/other/other_github",
             alt:"Github"
         }
@@ -37,7 +38,7 @@ export const Contactes=()=>{
     })
 
     return (
-            <div id="contactes"  className="contactes_section" >
+            <div id="contactes" dataset={'contact_section'}  className="main_section" >
                 <h2>Me contacté</h2>
                 <div id="contacte_list" >{contacteList} </div>
             </div>

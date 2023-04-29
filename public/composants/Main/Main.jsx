@@ -7,6 +7,7 @@ import { Technologies } from "./Technologies/Technologies.jsx";
 import { Contactes } from "./Contactes/Contactes.jsx";
 
 export const Main=()=>{
+    
 
     return (
 
