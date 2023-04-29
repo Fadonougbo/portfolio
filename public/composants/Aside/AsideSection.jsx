@@ -21,7 +21,7 @@ export const AsideSection=({id,liaisonName,menuIdicator,children})=>{
     return (
         <section id={id} onClick={click} >
             <div>
-                <img src={`../../pictures/aside/aside_${id}.svg`} alt={id+" logo"} />
+                <img src={`aside/aside_${id}.svg`} alt={id+" logo"} />
             </div>
             <span className="section_title" >{children}</span>
         </section>

@@ -8,10 +8,6 @@ change le favicon
 
 corrige les fautes de la presentation
 
-ajoute un indicateur au niveau du menu
-
-ajoute une aniamtion lors du loading
-
 
 *********************
 

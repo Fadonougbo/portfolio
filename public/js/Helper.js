@@ -105,7 +105,7 @@ export class Helper
              */
             el.links.forEach((link)=>
             {
-                newDiv.innerHTML+=`<img src="../pictures/${path}/${path}_${link}.svg" alt="logo" />`
+                newDiv.innerHTML+=`<img src="${path}/${path}_${link}.svg" alt="logo" />`
             })
 
             /**

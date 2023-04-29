@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable @babel/object-curly-spacing */
 import React, { useEffect } from "react"
 import { useRef } from "react"
@@ -8,6 +9,7 @@ import { Aside } from "./Aside/Aside.jsx"
 import { Main } from "./Main/Main.jsx"
 import { startTitleObserver } from "../js/titlesObserver.js"
 import { startCardObserver } from "../js/technoCardObserver.js"
+import { Loader } from "./Loader.jsx"
 
 export const Home=()=>{
 
@@ -27,7 +29,8 @@ export const Home=()=>{
             <GlobaleContainer ref={mainRef}>
                 <Main/>
                 <Footer/>
-            </GlobaleContainer>         
+            </GlobaleContainer>
+            <Loader/>        
         </>
     )
 }

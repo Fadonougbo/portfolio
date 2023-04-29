@@ -8,7 +8,7 @@ export const Card=({class_name,path,name})=>
         <div className={`card ${class_name}`} >
                     
             <div className="logo">
-                <img src={`../../../pictures/${path}/${path}_${name}.svg`} alt={name+" logo"} />
+                <img src={`${path}/${path}_${name}.svg`} alt={name+" logo"} />
             </div>
                 <span>{name}</span>
         </div>

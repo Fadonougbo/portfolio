@@ -7,7 +7,7 @@ export const Footer=()=>{
     return (
             <footer>
                <div>
-                  <p>Copyright &copy; 2023 <span>Gautier FADONOUGBO</span>  </p>
+                  <p>Copyright &copy; 2023 <span>Gautier FADONOUGBO</span> All right reserved  </p>
                </div>
             </footer>
            )

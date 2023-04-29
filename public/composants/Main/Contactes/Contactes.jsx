@@ -11,22 +11,22 @@ export const Contactes=()=>{
 
         {
             href:"https://www.facebook.com/gautier.fadonougbo.9",
-            imgPath:"img/facebook-svgrepo-com",
+            imgPath:"facebook-svgrepo-com",
             alt:"Facebook"
         },
         {
             href:"mailto:fadougbogautier@gmail.com",
-            imgPath:"img/mail-svgrepo-com",
+            imgPath:"mail-svgrepo-com",
             alt:"Email"
         },
         {
             href:"tel:+22991810043",
-            imgPath:"img/whatsapp-svgrepo-com",
+            imgPath:"whatsapp-svgrepo-com",
             alt:"Whatsapp"
         },
         {
             href:"https://github.com/Fadonougbo?tab=repositories",
-            imgPath:"pictures/other/other_github",
+            imgPath:"other_github",
             alt:"Github"
         }
         
