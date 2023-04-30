@@ -2,28 +2,43 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react"
-import { Techno } from "./Techno.jsx"
+import { Project } from "./Project.jsx"
 
 export const Projects=()=>{
 
-    const technoList=["React JS","Scss","Javascript","Vite js","Git"]
 
-    const list=technoList.map((el,key)=>
-    {
-      return <Techno key={key} name={el}/>
-    })
+   const list=[
+      {
+        name:"Portfolio",
+        description:"Realisation de mon portfolio",
+        technologies:["React JS","Scss","Javascript","Vite js","Git"],
+        imgPath:"portfolio",
+        useMediaQuery:true
+      },
+      {
+         name:"Generateur de cahier des charges",
+         description:"Site web qui permet de généré un cahier des charges en version pdf (projet de stage)  ",
+         technologies:["PHP","Scss","Javascript","Git","Mysql","Mysql Workbench"],
+         imgPath:"cahier_de_charge",
+         useMediaQuery:false
+      },
+      {
+         name:"Livre d'or",
+         description:"Site web qui permet d'ajouter des commentaires (projet personnel)",
+         technologies:["Node js","Scss","PostgreSql","Git"],
+         imgPath:"livre_dor",
+         useMediaQuery:false
+       }
+   ]
+
+   const projectList=list.map((info,key)=>{
+      return <Project info={info} key={key} />
+   })
 
     return (
             <div id="projects" dataset={"project_section"} className="main_section" >
                <section><h2>Mes projets</h2></section>
-               <section className="project_card" >
-                    <div id="image" ></div>
-                    <div id="project_info" >
-                        <h4>Nom: <p>Portfolio</p></h4>
-                        <h4>Description: <p>Realisation de mon portfolio</p> </h4>
-                         <h4>Languages et technologies utilisées:{list}</h4>
-                    </div>
-               </section>
+              <div id="projectCards" >{projectList}</div> 
             </div>
     )
 }

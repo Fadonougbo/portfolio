@@ -30,7 +30,7 @@ export const Home=()=>{
                 <Main/>
                 <Footer/>
             </GlobaleContainer>
-            <Loader/>        
+            <Loader/>  
         </>
     )
 }

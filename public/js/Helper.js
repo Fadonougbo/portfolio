@@ -28,8 +28,21 @@ export class Helper
         const headerHeight=header.offsetHeight
         
         aside.style.setProperty("height",`calc(100vh - ${headerHeight}px)`)
+        aside.style.setProperty("margin-top",`${headerHeight}px`)
     }
 
+   static setPos()
+    {
+        const aside=document.querySelector("aside")
+
+        const asideWidth=aside.offsetWidth
+        const main=document.querySelector("main")
+        const footer=document.querySelector("footer")
+
+        main.style.setProperty("transform",`translateX(${asideWidth}px)`)
+        footer.style.setProperty("transform",`translateX(${asideWidth}px)`)
+        
+    }
 
     /**
      * 
@@ -44,35 +57,54 @@ export class Helper
         const asideWidth=aside.offsetWidth
 
         globaleContainer.classList.toggle("move")
+        const main=document.querySelector("main")
+        const footer=document.querySelector("footer")
 
-        const removeOverflow=()=>{
-                document.body.style.overflow=""
-            
+        const add_Zindex_In_Aside=()=>{
+                aside.style.setProperty("z-index","1")
         }
 
 
         if (globaleContainer.classList.contains("move")) 
         {
-            globaleContainer.style.setProperty("transform",`translateX(${asideWidth}px)`)
-            document.body.style.overflow="hidden"
+            this.setPos()
+            main.addEventListener("transitionend",add_Zindex_In_Aside,{once:true})
 
-        }else 
-        {   
-            globaleContainer.style.setProperty("transform",`translateX(0)`)
-            globaleContainer.addEventListener("transitionend",removeOverflow,{once:true})
-
-            const onResize=(e)=>{
+            const onResize=()=>{
 
                 if(window.innerWidth>=1023)
                 {
-                    globaleContainer.style.setProperty("transform",`translateX(11%)`)
+                    main.style.setProperty("transform",`translateX(14%)`)
+                    footer.style.setProperty("transform",`translateX(14%)`)
+                    
                 }else
                 {
-                    globaleContainer.style.setProperty("transform",`translateX(0)`)
+                    this.setPos()
                 }
             }
 
-            window.addEventListener("resize",throttle(onResize,450) )
+            window.addEventListener("resize",throttle(onResize,350) ) 
+
+        }else 
+        {   
+            main.style.setProperty("transform",`translateX(0)`)
+            footer.style.setProperty("transform",`translateX(0)`)
+            aside.style.setProperty("z-index","-1")
+
+            const onResize=()=>{
+
+                if(window.innerWidth>=1023)
+                {
+                    aside.style.setProperty("z-index","1")
+                }else
+                {
+                    main.style.setProperty("transform",`translateX(0)`)
+                    footer.style.setProperty("transform",`translateX(0)`)
+                    aside.style.setProperty("z-index","-1")
+                }
+            }
+
+            window.addEventListener("resize",throttle(onResize,350) )
         }
     }
 

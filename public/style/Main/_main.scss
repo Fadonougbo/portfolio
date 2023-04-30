@@ -8,7 +8,10 @@
 main 
 {
     width: 100%;
+    background-color:var(--body-basic-bg-dark-color);
+    z-index: 40;
     overflow-x: hidden;
+    transition: transform 0.3s;
 
     & h2 
     {

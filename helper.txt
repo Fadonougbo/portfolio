@@ -6,7 +6,9 @@ faire le SEO
 
 change le favicon
 
-corrige les fautes de la presentation
+continu avec l'insertion d'image
+
+d'esactive l'animation de l'indicator au scroll
 
 
 *********************

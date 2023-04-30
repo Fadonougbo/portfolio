@@ -2,9 +2,11 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/self-closing-comp */
 import React, { useEffect, useState } from "react"
+import {createPortal} from "react-dom"
 import { AsideSection } from "./AsideSection"
 import { MenuIndicator } from "../../js/MenuIndicator.js"
 import { startSectionObserver } from "../../js/mainSectionObserver.js"
+import { Helper } from "../../js/Helper.js"
 
 
 export const Aside=()=>{
@@ -52,6 +54,7 @@ export const Aside=()=>{
 
         init()
 
+        Helper.setAsideDefaultHeight()
 
     },[])
 
@@ -61,5 +64,5 @@ export const Aside=()=>{
         return <AsideSection id={id} liaisonName={liaisonName} menuIdicator={menuIdicator} key={key} >{name}</AsideSection>
     })
 
-    return (<aside>{AsideSectionList}</aside>)
+    return (createPortal(<aside>{AsideSectionList}</aside>,document.body))
 }

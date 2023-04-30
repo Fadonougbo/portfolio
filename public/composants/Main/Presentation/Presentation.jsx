@@ -42,7 +42,7 @@ export const Presentation=()=>{
                     <section id="perso_description" >
                         <h2>Qui suis-je ?</h2>
                         <p>Salut je m'appelle <span>Gautier Fadonougbo</span>, je suis développeur web full stack .</p>
-                        <p>Je suis passionné par le développement web, le développement d'applications mobile et tous ce qui a atrait à la programmation informatique .</p>
+                        <p>Je suis passionné par le développement web, le développement d'applications mobile et tous ce qui a attrait à la programmation informatique .</p>
                         <p>J'aide les entreprises à augmenter leur visibilité sur internet en leur offrant mes services .</p>
                     </section>
 
