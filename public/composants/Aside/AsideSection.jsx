@@ -2,19 +2,14 @@
 import React from "react";
 import { scrollto } from "../../js/scrollto.js";
 
-export const AsideSection=({id,liaisonName,menuIdicator,children})=>{
+export const AsideSection=({id,liaisonName,children})=>{
     
-    const click=(e)=>
+    const click=()=>
     {
         if(liaisonName)
         {
             scrollto(liaisonName)
         }
-
-       if(menuIdicator)
-       {
-        menuIdicator.run(e.currentTarget)
-       }
         
     }
 

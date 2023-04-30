@@ -4,9 +4,8 @@ const observer=new IntersectionObserver((elementList)=>
 {
     elementList.forEach((el)=>
     {
-        if(el.isIntersecting)
+        if(el.intersectionRatio>0.1)
         {
-
             const dataset=el.target.getAttribute("dataset")
 
             const explodeDataset=(dataset.split("_"))[0]

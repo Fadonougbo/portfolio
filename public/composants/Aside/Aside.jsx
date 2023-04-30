@@ -1,7 +1,7 @@
 /* eslint-disable @babel/object-curly-spacing */
 /* eslint-disable react/display-name */
 /* eslint-disable react/self-closing-comp */
-import React, { useEffect, useState } from "react"
+import React, { useEffect} from "react"
 import {createPortal} from "react-dom"
 import { AsideSection } from "./AsideSection"
 import { MenuIndicator } from "../../js/MenuIndicator.js"
@@ -10,8 +10,6 @@ import { Helper } from "../../js/Helper.js"
 
 
 export const Aside=()=>{
-
-    const [menuIdicator,setMenuIdicator]=useState(null)
 
     const sectionList=[
          {
@@ -47,8 +45,6 @@ export const Aside=()=>{
         function init()
         {
             const menuIdicator=new MenuIndicator("aside","aside section")
-
-            setMenuIdicator(menuIdicator)
             startSectionObserver(menuIdicator)
         }
 
@@ -61,7 +57,7 @@ export const Aside=()=>{
     const AsideSectionList=sectionList.map((el,key)=>
     {
         const {id,liaisonName,name}=el
-        return <AsideSection id={id} liaisonName={liaisonName} menuIdicator={menuIdicator} key={key} >{name}</AsideSection>
+        return <AsideSection id={id} liaisonName={liaisonName}  key={key} >{name}</AsideSection>
     })
 
     return (createPortal(<aside>{AsideSectionList}</aside>,document.body))

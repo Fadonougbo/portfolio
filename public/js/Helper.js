@@ -4,6 +4,7 @@ import throttle from "lodash.throttle"
 export class Helper
 {
 
+
     /**
      * Donne une margin au globaleContainer
      */
@@ -31,17 +32,38 @@ export class Helper
         aside.style.setProperty("margin-top",`${headerHeight}px`)
     }
 
+    /**
+     * Position qui permet au main et au footer de bouger
+     * Deplace le main et le footer de la largeur du aside sur grand ecrand
+     */
    static setPos()
     {
         const aside=document.querySelector("aside")
+        const footer=document.querySelector("footer")
+        const main=document.querySelector("main")
 
         const asideWidth=aside.offsetWidth
-        const main=document.querySelector("main")
-        const footer=document.querySelector("footer")
+        
 
         main.style.setProperty("transform",`translateX(${asideWidth}px)`)
         footer.style.setProperty("transform",`translateX(${asideWidth}px)`)
         
+    }
+
+    /**
+     * Ramène le main et le footer à la position initiale et
+     * cache le aside
+     */
+    static removePos()
+    {
+        const aside=document.querySelector("aside")
+        const main=document.querySelector("main")
+        const footer=document.querySelector("footer")
+
+        main.style.setProperty("transform",`translateX(0)`)
+        footer.style.setProperty("transform",`translateX(0)`)
+
+        aside.style.setProperty("z-index","-1")
     }
 
     /**
@@ -53,58 +75,71 @@ export class Helper
     static translateMain(globaleContainer)
     {
         const aside=document.querySelector("aside")
-
-        const asideWidth=aside.offsetWidth
-
-        globaleContainer.classList.toggle("move")
         const main=document.querySelector("main")
-        const footer=document.querySelector("footer")
+        globaleContainer.classList.toggle("move")
+        
 
         const add_Zindex_In_Aside=()=>{
-                aside.style.setProperty("z-index","1")
+            aside.style.setProperty("z-index","1")
+        }
+
+        const remove_Zindex_In_Aside=()=>{
+            aside.style.setProperty("z-index","-1")
         }
 
 
         if (globaleContainer.classList.contains("move")) 
-        {
+        {   
+
             this.setPos()
+
+            /**
+             * Affiche le aside après la transformation du main
+             */
             main.addEventListener("transitionend",add_Zindex_In_Aside,{once:true})
 
             const onResize=()=>{
 
                 if(window.innerWidth>=1023)
-                {
-                    main.style.setProperty("transform",`translateX(14%)`)
-                    footer.style.setProperty("transform",`translateX(14%)`)
-                    
+                {   
+                    this.setPos()
                 }else
                 {
                     this.setPos()
                 }
             }
 
-            window.addEventListener("resize",throttle(onResize,350) ) 
+            window.addEventListener("resize",throttle(onResize,300) ) 
 
         }else 
         {   
-            main.style.setProperty("transform",`translateX(0)`)
-            footer.style.setProperty("transform",`translateX(0)`)
-            aside.style.setProperty("z-index","-1")
+            /**
+             * Cache le aside et ramène le main et le footer à position 0 sur petie ecrand
+             */
+            this.removePos()
+            /**
+             * ajoute le z-index de force a l'aside lorsquon 
+             */
+            main.addEventListener("transitionend",remove_Zindex_In_Aside,{once:true})
 
             const onResize=()=>{
 
                 if(window.innerWidth>=1023)
-                {
+                {   
+                    /**
+                     * Rend visible le aside sur grand ecrand
+                     */
                     aside.style.setProperty("z-index","1")
                 }else
-                {
-                    main.style.setProperty("transform",`translateX(0)`)
-                    footer.style.setProperty("transform",`translateX(0)`)
-                    aside.style.setProperty("z-index","-1")
+                {   
+                    /**
+                     * Cache le aside et ramène le main et le footer à position 0 sur petie ecrand
+                     */
+                    this.removePos();
                 }
             }
 
-            window.addEventListener("resize",throttle(onResize,350) )
+            window.addEventListener("resize",throttle(onResize,300) )
         }
     }
 

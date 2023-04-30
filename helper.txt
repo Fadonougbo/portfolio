@@ -4,7 +4,6 @@ html,scss,react,js,pixabay pour les images,svg repo pour les icons gratuit
 
 faire le SEO
 
-change le favicon
 
 continu avec l'insertion d'image
 
