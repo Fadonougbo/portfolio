@@ -24,7 +24,7 @@ export const Projects=()=>{
       },
       {
          name:"Livre d'or",
-         description:"Site web qui permet d'ajouter des commentaires (projet e)",
+         description:"Site web qui permet d'ajouter des commentaires (projet personnel)",
          technologies:["Node js","Scss","PostgreSql","Git"],
          imgPath:"livre_dor",
          useMediaQuery:false

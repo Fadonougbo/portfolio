@@ -14,7 +14,7 @@ export const Aside=()=>{
     const sectionList=[
          {
             id:"home",
-            name:"Acceuille",
+            name:"Accueil",
             liaisonName:"home_section"
         },
         /* {
@@ -34,7 +34,7 @@ export const Aside=()=>{
         },
         {
             id:"contact",
-            name:"Contactes",
+            name:"Me contacter",
             liaisonName:"contact_section"
         }
     ]
