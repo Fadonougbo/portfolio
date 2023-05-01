@@ -39,7 +39,7 @@ export const Contactes=()=>{
 
     return (
             <div id="contactes" dataset={'contact_section'}  className="main_section" >
-                <h2>Me contacté</h2>
+                <h2>Me contacter</h2>
                 <div id="contacte_list" >{contacteList} </div>
             </div>
            )
