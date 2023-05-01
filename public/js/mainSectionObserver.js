@@ -1,39 +1,41 @@
-let menuIdicator;
+let menuIndicator;
 
 const observer=new IntersectionObserver((elementList)=>
 {
     elementList.forEach((el)=>
     {
-        if(el.intersectionRatio>0.1)
+
+        if(el.isIntersecting)
         {
+
             const dataset=el.target.getAttribute("dataset")
 
             const explodeDataset=(dataset.split("_"))[0]
 
             const asideSectionLiaison=document.querySelector(`#${explodeDataset}`)
 
-            menuIdicator.addEvent(asideSectionLiaison)
+            menuIndicator.addEvent(asideSectionLiaison)
 
         }
        
     })
         
 },{
-    threshold:[0.1]
+    threshold:0
 })
 
 /**
  * 
- * @param {menuIdicator} menuIdicatorInstance 
+ * @param {menuIndicator} menuIndicatorInstance 
  */
-export function startSectionObserver(menuIdicatorInstance)
+export function startSectionObserver(menuIndicatorInstance)
 {
     const sections=document.querySelectorAll(".main_section")
      const sectionList=[...sections]
     /**
      * Initialisation menu indicator
      */
-    menuIdicator=menuIdicatorInstance
+    menuIndicator=menuIndicatorInstance
 
     if(sectionList.length>0)
     {

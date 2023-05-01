@@ -36,13 +36,13 @@ export const Presentation=()=>{
 
 
     return (
-            <div id="presentation" dataset={"about_section"} className="main_section" >
+            <div id="presentation" dataset={"home_section"} className="main_section" >
                 <h1 className="typing">Bienvenue sur mon portfolio.</h1>
                 <div id="presentation_container" >
                     <section id="perso_description" >
                         <h2>Qui suis-je ?</h2>
                         <p>Salut je m'appelle <span>Gautier Fadonougbo</span>, je suis développeur web full stack .</p>
-                        <p>Je suis passionné par le développement web, le développement d'application mobile et tous ce qui a attrait à la programmation informatique .</p>
+                        <p>Je suis passionné par le développement web, le développement d'application mobile et tous ce qui a trait à la programmation informatique .</p>
                         <p>J'aide les entreprises à augmenter leur visibilité sur internet en leur offrant mes services .</p>
                     </section>
 

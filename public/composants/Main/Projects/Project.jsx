@@ -29,8 +29,8 @@ export const Project=({info})=>{
                         
                     </div>
                     <div id="project_info" >
-                        <h4>Nom: <p>{name}</p></h4>
-                        <h4>Description: <p>{description}</p> </h4>
+                        <h4>Nom: <p><em>{name}</em></p></h4>
+                        <h4>Description: <p><em>{description}</em></p> </h4>
                          <h4>Languages et technologies utilisées:{list}</h4>
                     </div>
                </section>

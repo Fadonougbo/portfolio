@@ -17,11 +17,11 @@ export const Aside=()=>{
             name:"Acceuille",
             liaisonName:"home_section"
         },
-        {
+        /* {
             id:"about",
             name:"A propos",
             liaisonName:"about_section"
-        }, 
+        },  */
         {
             id:"project",
             name:"Mes projets",

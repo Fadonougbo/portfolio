@@ -17,14 +17,14 @@ export const Projects=()=>{
       },
       {
          name:"Generateur de cahier des charges",
-         description:"Site web qui permet de généré un cahier des charges en version pdf (projet de stage)  ",
+         description:"Site web qui permet de générer un cahier des charges en version pdf (projet de stage)  ",
          technologies:["PHP","Scss","Javascript","Git","Mysql","Mysql Workbench"],
          imgPath:"cahier_de_charge",
          useMediaQuery:false
       },
       {
          name:"Livre d'or",
-         description:"Site web qui permet d'ajouter des commentaires (projet personnel)",
+         description:"Site web qui permet d'ajouter des commentaires (projet e)",
          technologies:["Node js","Scss","PostgreSql","Git"],
          imgPath:"livre_dor",
          useMediaQuery:false
