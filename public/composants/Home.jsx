@@ -9,7 +9,6 @@ import { Aside } from "./Aside/Aside.jsx"
 import { Main } from "./Main/Main.jsx"
 import { startTitleObserver } from "../js/titlesObserver.js"
 import { startCardObserver } from "../js/technoCardObserver.js"
-import { Loader } from "./Loader.jsx"
 
 export const Home=()=>{
 
@@ -30,7 +29,6 @@ export const Home=()=>{
                 <Main/>
                 <Footer/>
             </GlobaleContainer>
-            <Loader/>  
         </>
     )
 }
