@@ -9,7 +9,7 @@
             background-color: var(--basic_bg_black_with_opcity);
             width: 100%;
             height: 100%;
-            padding: 0.9rem;
+            padding: 0.9rem 0;
         }
 
         p
@@ -22,5 +22,18 @@
         {
             color:var(--basic-royalblue);
             font-weight: bold;
+        }
+    }
+
+    
+    $val:var(--aside_media_1023_width);
+
+    @media screen and (min-width:1023px) {
+        
+        footer
+        {
+            width:calc(100% - $val);
+            transform: translateX(calc($val + 3%));
+           
         }
     }

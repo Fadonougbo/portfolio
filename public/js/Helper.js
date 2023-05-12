@@ -38,15 +38,17 @@ export class Helper
      */
    static setPos()
     {
-        const aside=document.querySelector("aside")
+
+        const tsl='20%'
+        
         const footer=document.querySelector("footer")
         const main=document.querySelector("main")
-
-        const asideWidth=aside.offsetWidth
         
+        main.style.setProperty("transform",`translateX(${tsl})`)
+        footer.style.setProperty("transform",`translateX(${tsl})`)
 
-        main.style.setProperty("transform",`translateX(${asideWidth}px)`)
-        footer.style.setProperty("transform",`translateX(${asideWidth}px)`)
+        //20% car le aside fait 17%
+        //donc 17% +3%
         
     }
 
@@ -56,90 +58,93 @@ export class Helper
      */
     static removePos()
     {
-        const aside=document.querySelector("aside")
         const main=document.querySelector("main")
         const footer=document.querySelector("footer")
 
         main.style.setProperty("transform",`translateX(0)`)
         footer.style.setProperty("transform",`translateX(0)`)
-
-        aside.style.setProperty("z-index","-1")
     }
+
+
+    static openRideauMenu()
+    {
+        const aside=document.querySelector("aside")
+
+        aside.classList.toggle("openMenu")
+        
+    }
+
+    static closeRideauMenu()
+    {
+        const aside=document.querySelector("aside")
+
+        //Menu burger
+        let wrapperMenu =document.querySelector('.wrapper-menu');
+
+        if(aside.classList.contains("openMenu"))
+        {
+            aside.classList.remove("openMenu")
+            wrapperMenu.classList.remove("open")
+        }
+    }
+
 
     /**
      * 
-     * Permet de faire bouger le globaleContainer
-     * Donne un overflow hidden au body et l'enlève apres la fermetur du menu 
+     * Active le menu
      * @param {HTMLElement} globaleContainer 
      */
     static translateMain(globaleContainer)
     {
-        const aside=document.querySelector("aside")
-        const main=document.querySelector("main")
         globaleContainer.classList.toggle("move")
-        
 
-        const add_Zindex_In_Aside=()=>{
-            aside.style.setProperty("z-index","1")
-        }
-
-        const remove_Zindex_In_Aside=()=>{
-            aside.style.setProperty("z-index","-1")
-        }
-
+        this.openRideauMenu()
 
         if (globaleContainer.classList.contains("move")) 
         {   
-
-            this.setPos()
-
-            /**
-             * Affiche le aside après la transformation du main
-             */
-            main.addEventListener("transitionend",add_Zindex_In_Aside,{once:true})
-
             const onResize=()=>{
 
                 if(window.innerWidth>=1023)
                 {   
+                    this.closeRideauMenu()
                     this.setPos()
-                }else
+                }else 
                 {
-                    this.setPos()
+                    this.removePos()
                 }
             }
 
-            window.addEventListener("resize",throttle(onResize,300) ) 
+            window.addEventListener("resize",throttle(onResize,180) ) 
 
         }else 
         {   
             /**
              * Cache le aside et ramène le main et le footer à position 0 sur petie ecrand
              */
-            this.removePos()
+            //this.removePos()
             /**
              * ajoute le z-index de force a l'aside lorsquon 
              */
-            main.addEventListener("transitionend",remove_Zindex_In_Aside,{once:true})
+            //main.addEventListener("transitionend",remove_Zindex_In_Aside,{once:true})
 
-            const onResize=()=>{
+            /* const onResize=()=>{
 
                 if(window.innerWidth>=1023)
-                {   
+                { */   
                     /**
                      * Rend visible le aside sur grand ecrand
                      */
-                    aside.style.setProperty("z-index","1")
+                /*     aside.style.setProperty("z-index","1")
                 }else
-                {   
+                { */   
                     /**
                      * Cache le aside et ramène le main et le footer à position 0 sur petie ecrand
                      */
-                    this.removePos();
+                    /* this.removePos();
                 }
             }
 
-            window.addEventListener("resize",throttle(onResize,300) )
+            window.addEventListener("resize",throttle(onResize,300) ) */
         }
     }
 

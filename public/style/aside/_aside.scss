@@ -6,12 +6,18 @@ aside
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 32%;
+    width: 0;
     position: fixed;
     left: 0;
     top:0;
     overflow-x: hidden;
-    z-index:-1;
+    transition: width 0.3s;
+    backdrop-filter:var(--bf);
+    
+    &.openMenu
+    {
+        width:100%;
+    }
 
     section 
     {
@@ -27,7 +33,7 @@ aside
             width: 0.6rem;
             height: 100%;
             position: absolute;
-            left: 1rem;
+            left: 8rem;
             border-radius: 35px;
             background-color:var(--basic-royalblue);
             opacity:0;

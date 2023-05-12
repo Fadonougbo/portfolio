@@ -12,6 +12,7 @@ header
     display: flex;
     justify-content: flex-end ;
     z-index: 100;
+    backdrop-filter: var(--bf);
 }
 
 header #burger 

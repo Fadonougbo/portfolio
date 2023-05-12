@@ -1,5 +1,18 @@
 @mixin technologies_media_query
 {
+    @media screen and (max-width:370px)
+    {
+        #technologies section
+        {
+            h3.add_width::after,h3.add_width::before
+            {
+                width: 30%;
+                transition: width 1.2s;
+            }
+        }
+       
+    }
+
     @media screen and (min-width:900px)
     {
         #technologies .techno_cards

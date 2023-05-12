@@ -1,13 +1,15 @@
 /* eslint-disable react/self-closing-comp */
 import React from "react";
 import { scrollto } from "../../js/scrollto.js";
+import { Helper } from "../../js/Helper.js";
 
 export const AsideSection=({id,liaisonName,children})=>{
     
     const click=()=>
     {
         if(liaisonName)
-        {
+        {   
+            Helper.closeRideauMenu()
             scrollto(liaisonName)
         }
         

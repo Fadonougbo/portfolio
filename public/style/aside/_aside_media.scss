@@ -1,11 +1,29 @@
 @mixin aside_media_query
 {
 
+  @media screen and (min-width:600px) {
+    aside.openMenu
+    {
+        width:65%;
+    }
+ }
+
+ @media screen and (min-width:750px) {
+  aside.openMenu
+  {
+      width:40%;
+  }
+}
+
     @media screen and (min-width:1023px) {
        aside 
        {
-         width:13%;
-         z-index: 2;
+         width:var(--aside_media_1023_width);
+
+         section .indicator 
+         {
+           left: 8px;
+         }
        }
     }
 
