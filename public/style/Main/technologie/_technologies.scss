@@ -56,6 +56,11 @@
         padding: 0.8rem;
         opacity: 0;
 
+        &:hover 
+        {
+            box-shadow:var(--over_shadow);
+        }
+
         &.bounce_in_left
         {
             opacity: 1;

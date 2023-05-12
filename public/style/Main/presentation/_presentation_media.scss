@@ -1,6 +1,16 @@
 @mixin presentationMediaQuery
 {
 
+@media screen and (max-width:450px) {
+
+    #presentation  #circle_animation
+    {
+        width:28rem;
+        height:28rem;
+    }
+
+}
+
  @media screen and (min-width:660px)
  {
     #presentation
@@ -22,6 +32,7 @@
         }
     }
  }
+
 
 
  @media screen and (min-width:950px)
@@ -71,15 +82,5 @@
 
  }
 
- @media screen and (max-width:450px) {
-    
-
-    #presentation  #circle_animation
-    {
-        width:28rem;
-        height:28rem;
-    }
-
- }
     
 }

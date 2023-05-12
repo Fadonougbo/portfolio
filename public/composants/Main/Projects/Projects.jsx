@@ -10,14 +10,14 @@ export const Projects=()=>{
    const list=[
       {
         name:"Portfolio",
-        description:"Realisation de mon portfolio",
+        description:"Realisation de mon portfolio (projet personnel)",
         technologies:["React JS","Scss","Javascript","Vite js","Git"],
         imgPath:"portfolio",
         useMediaQuery:true
       },
       {
          name:"Generateur de cahier des charges",
-         description:"Site web qui permet de générer un cahier des charges en version pdf (projet de stage)  ",
+         description:"Site web qui permet de générer un cahier des charges en version PDF (projet de stage)  ",
          technologies:["PHP","Scss","Javascript","Git","Mysql","Mysql Workbench"],
          imgPath:"cahier_de_charge",
          useMediaQuery:false

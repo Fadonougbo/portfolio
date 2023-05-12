@@ -15,6 +15,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
     }
 
     .project_card 
@@ -24,6 +25,9 @@
         border-radius: 2.5rem;
         width: 80%;
         margin: 3rem 0;
+        position: relative;
+        overflow-y: hidden;
+        //filter:blur(10px)
         
         #image
         {
@@ -39,6 +43,25 @@
         #project_info 
         {
             padding: 0.6rem 0;
+            position: absolute;
+            bottom: 0;
+            left:0;
+            height: 0;
+            background: var( --basic_bg_black_with_opcity);
+            backdrop-filter: var(--bf);
+            transition: height 0.3s;
+
+        }
+
+        &:hover 
+        {
+            box-shadow:var(--over_shadow);
+            
+            #project_info
+            {
+               height: 60%;
+            }
+            
         }
 
         #project_info :is(h3,h4)
@@ -62,7 +85,7 @@
 
         #project_info :is(p,span)
         {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         #project_info p 
