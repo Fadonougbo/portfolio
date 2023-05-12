@@ -21,8 +21,11 @@ export const Project=({info})=>{
                         {
                             useMediaQuery?(
                             <picture>
-                                <source media="(max-width:500px)" srcSet={`project/project_${imgPath}_min1.png`} />
-                                <img src={`project/project_${imgPath}_min3.png`} alt="" />
+                                {/* <source media="(min-width:1022px)" srcSet={`project/project_${imgPath}_4.png`} />*/}
+                                <source media="(min-width:1000px)" srcSet={`project/project_${imgPath}_3.png`} />
+                                <source media="(min-width:575px)" srcSet={`project/project_${imgPath}_2.png`} /> 
+                                <source media="(min-width:319px)" srcSet={`project/project_${imgPath}_1.png`} />
+                                <img src={`project/project_${imgPath}_1.png`} alt="" />
                             </picture>
                             ):<img src={`project/project_${imgPath}.png`} alt="" />
                         }
