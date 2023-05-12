@@ -22,12 +22,11 @@
     {
         border:solid 4px var(--basic-royalblue);
         padding: 1.8rem;
-        border-radius: 2.5rem;
+        border-radius: 2.3rem;
         width: 80%;
         margin: 3rem 0;
         position: relative;
         overflow-y: hidden;
-        //filter:blur(10px)
         
         #image
         {
@@ -42,14 +41,17 @@
 
         #project_info 
         {
-            padding: 0.6rem 0;
             position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             bottom: 0;
             left:0;
+            right: 0;
             height: 0;
-            background: var( --basic_bg_black_with_opcity);
-            backdrop-filter: var(--bf);
+            background-color: #0c0f19;
             transition: height 0.3s;
+            overflow: hidden;
 
         }
 
@@ -59,14 +61,14 @@
             
             #project_info
             {
-               height: 60%;
+               height: 100%;
             }
             
         }
 
         #project_info :is(h3,h4)
         {
-            margin: 1rem 0;
+            margin: 0.8rem 0;
             font-size: 1.7rem;
             margin-left: 0.8rem;
             vertical-align: middle;
@@ -96,7 +98,7 @@
         #project_info span 
         {
             display: inline-block;
-            margin: 0.8rem;
+            margin: 0.5rem;
             background:var(--basic-royalblue);
             padding: 0.3rem;
             color:rgb(230, 224, 224);
